@@ -18,4 +18,5 @@ EOF
 )
 echo "$config_text" > ~/.ssh/config
 # Change some configurations into /etc/ssh/sshd_config to make ssh-pass avaiable 
-
+sudo sed -i '/PubkeyAuthentication no/{
+     s/no/yes/ }'   /etc/ssh/sshd_config
