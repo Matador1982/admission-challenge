@@ -14,6 +14,6 @@ EOF
 )
 echo "$config_text" > ~/.ssh/config
 # Change some configurations into /etc/ssh/sshd_config to make ssh-pass avaiable 
-sudo ssh-keygen -O PubkeyAuthentication=yes -f /etc/ssh/sshd_config
-sudo ssh-keygen -O PasswordAuthentication=yes -f /etc/ssh/sshd_config
-sudo ssh-keygen -O ChallengeResponseAuthentication=yes -f /etc/ssh/sshd_config
+# sudo ssh-keygen -O PubkeyAuthentication=yes -f /etc/ssh/sshd_config
+# sudo ssh-keygen -O PasswordAuthentication=yes -f /etc/ssh/sshd_config
+# sudo ssh-keygen -O ChallengeResponseAuthentication=yes -f /etc/ssh/sshd_config
