@@ -7,7 +7,7 @@ echo -e "12345678\n12345678" | sudo passwd vagrant
 
 # create "config" file into dir : ~/.ssh$ to accept "StrictHostKeyChecking" automaticaly
 config_text=$(cat <<EOF
-Host *
+Host*
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
 EOF
