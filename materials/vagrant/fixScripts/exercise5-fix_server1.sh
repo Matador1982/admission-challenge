@@ -1,6 +1,6 @@
 #!/bin/bash
 #creating the pair of keys (public + private)
-ssh-keygen -t rsa -C "anton"
+ssh-keygen -t rsa -b 4096 -C "anton" -f ~/.ssh/anton -N ""
 
 #Edit config ssh file for server2 authorization Indentify
 echo "IdentityFile ~/.ssh/anton" | sudo tee -a ~/.ssh/config
