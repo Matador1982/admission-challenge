@@ -11,7 +11,6 @@ Host server1
  Hostname 192.168.60.10
  port 22
  user vagrant
-
 Host *
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
