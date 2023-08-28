@@ -7,8 +7,8 @@ ssh-keygen -t rsa -b 4096 -C "anton" -f ~/.ssh/anton -N ""
 
 # create "config" file into dir : ~/.ssh$ to accept "StrictHostKeyChecking" automaticaly
 config_text=$(cat <<EOF
-Host server1
- Hostname 192.168.60.10
+Host server2
+ Hostname 192.168.60.11
  port 22
  user vagrant
 Host *
