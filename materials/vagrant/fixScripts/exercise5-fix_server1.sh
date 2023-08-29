@@ -6,7 +6,7 @@
   echo -e "12345678\n12345678" | sudo passwd vagrant
 
 #creating the pair of keys (public + private)
- ssh-keygen -t rsa -b 4096 -C "anton" -f ~/.ssh/anton -N ""
+ ssh-keygen -t rsa -b 4096 -C "server2" -f ~/.ssh/anton -N ""
 
 # create "config" file into dir : ~/.ssh$ to accept "StrictHostKeyChecking" automaticaly
 config_text=$(cat <<EOF
