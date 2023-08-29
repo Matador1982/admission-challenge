@@ -6,5 +6,5 @@ echo "192.168.60.11   server2" | sudo tee -a /etc/hosts > /dev/null
 # echo -e "12345678\n12345678" | sudo passwd vagrant
 
 # Change some configurations into /etc/ssh/sshd_config to make ssh-pass avaiable 
-  sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
-  sudo service sshd restart
+#  sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+#  sudo service sshd restart
