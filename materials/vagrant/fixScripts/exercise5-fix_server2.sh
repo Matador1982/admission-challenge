@@ -5,9 +5,6 @@
 # set password for vargant user - server1 (pass: 12345678)
   echo -e "12345678\n12345678" | sudo passwd vagrant
 
-#creating the pair of keys (public + private)
- ssh-keygen -t rsa -b 4096 -C "server2" -f ~/.ssh/anton -N ""
-
 # create "config" file into dir : ~/.ssh$ to accept "StrictHostKeyChecking" automaticaly
 config_text=$(cat <<EOF
 Host server1
@@ -22,6 +19,9 @@ IdentityFile ~/.ssh/anton
 EOF
 )
 echo "$config_text" > /home/vagrant/.ssh/config
+
+#creating the pair of keys (public + private)
+ ssh-keygen -t rsa -b 4096 -C "server2" -f ~/.ssh/anton -N ""
 
 #copy the pablic key to server1
 sudo apt update
