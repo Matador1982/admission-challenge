@@ -5,7 +5,7 @@
 # set password for vargant user - server1 (pass: 12345678)
 # echo -e "12345678\n12345678" | sudo passwd vagrant
 
-# create "config" file into dir : ~/.ssh$ to accept "StrictHostKeyChecking" automaticaly
+# create "config" file into dir : home/vagrant/.ssh$
 config_text=$(cat <<EOF
 Host server1
  Hostname 192.168.60.10
