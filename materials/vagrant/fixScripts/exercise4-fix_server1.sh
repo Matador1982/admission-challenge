@@ -20,7 +20,7 @@ chmod 400 $pass_file1
   sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
   sudo service sshd restart
 
-#create script file to change the vagrant user pass
+#create script file to change the vagrant user password from server2 
 
 # Contents of the script to be generated
 script_content="#!/bin/bash
