@@ -42,5 +42,5 @@ echo "$script_content" > "$script_path"
 chmod +x "$script_path"
 
 
-echo "You can use this command to connect server2 via pass into the file: sshpass -f $pass_file ssh server2"
+echo "You can use this command to connect server2 via pass into the file: sshpass -f $pass_file2 ssh server2"
 
