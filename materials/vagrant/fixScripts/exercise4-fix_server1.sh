@@ -4,8 +4,7 @@
 
 # set password for vargant user - server1 (pass: 12345678)
  echo -e "12345678\n12345678" | sudo passwd vagrant
- echo 12345678 > /home/vagrant/pass_server1.txt
 
-# Change some configurations into /etc/ssh/sshd_config to make ssh-pass avaiable 
+# Change some configurations into /etc/ssh/sshd_config to make ssh-pass available 
   sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
   sudo service sshd restart
