@@ -26,6 +26,6 @@ ssh-keygen -t rsa -b 4096 -C "server2" -f /home/vagrant/.ssh/anton -N ""
 #copy the pablic key to server2
 sudo apt update
 sudo apt install sshpass
-sshpass -p '12345678' ssh-copy-id -i /home/vagrant/.ssh/anton server2
+sshpass -p '12345678' ssh-copy-id -i /home/vagrant/.ssh/anton.pub server2
 
 
