@@ -16,7 +16,7 @@ Host *
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
 
-IdentityFile ~/.ssh/anton    
+IdentityFile ~/.ssh/server2  
 EOF
 )
 echo "$config_text" > /home/vagrant/.ssh/config
@@ -27,4 +27,4 @@ echo "$config_text" > /home/vagrant/.ssh/config
 #copy the pablic key to server1
  sudo apt update
  sudo apt install sshpass
-#sshpass -p '12345678' ssh-copy-id -i /home/vagrant/.ssh/anton.pub server2
+ sshpass -p '12345678' ssh-copy-id -i /home/vagrant/.ssh/server2.pub server1
