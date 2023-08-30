@@ -18,6 +18,7 @@ chmod 400 $pass_file1
 
 # Change some configurations into /etc/ssh/sshd_config to make ssh-pass available 
   sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+  sudo sed -i 's/PubkeyAuthentication yes/PubkeyAuthentication no/' /etc/ssh/sshd_config
   sudo service sshd restart
 
 #create script file to change the vagrant user password from server2 
