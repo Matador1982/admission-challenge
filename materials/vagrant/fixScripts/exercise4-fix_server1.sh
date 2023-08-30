@@ -31,7 +31,7 @@
 
 # Change the password for vagrant user on server1
 #echo "vagrant:$password" | sudo chpasswd
-"
+
 
 # Path where you want to create the script file
 # script_path="/home/vagrant/.ssh/change_pass.sh"
