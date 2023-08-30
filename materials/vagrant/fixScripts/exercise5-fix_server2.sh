@@ -28,4 +28,4 @@ echo "$config_text" > /home/vagrant/.ssh/config
 #copy the pablic key to server1
  sudo apt update
  sudo apt install sshpass
- sshpass -p '12345678' ssh-copy-id -i /home/vagrant/.ssh/server2.pub server1
+# sshpass -p '12345678' ssh-copy-id -i /home/vagrant/.ssh/server2.pub server1
