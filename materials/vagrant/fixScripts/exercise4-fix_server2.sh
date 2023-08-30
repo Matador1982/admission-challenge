@@ -11,6 +11,7 @@ echo -e "12345678\n12345678" | sudo passwd vagrant
 
 # Change some configurations into /etc/ssh/sshd_config to make ssh-pass available 
 sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+sudo sed -i 's/PubkeyAuthentication yes/PubkeyAuthentication no/' /etc/ssh/sshd_config
 sudo service sshd restart
 pass_file1="/home/vagrant/.ssh/ssh_pass_for_server1"
 pass_file2="/home/vagrant/.ssh/ssh_pass_for_server2"
