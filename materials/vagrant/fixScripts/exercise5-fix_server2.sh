@@ -29,4 +29,5 @@ echo "$config_text" > /home/vagrant/.ssh/config
  sudo apt update
  sudo apt install sshpass
  sshpass -p '12345678' ssh-copy-id -f -i /home/vagrant/.ssh/server2.pub server1
-
+#Change permission for a vagrant user 
+ sudo chown vagrant:vagrant server2
