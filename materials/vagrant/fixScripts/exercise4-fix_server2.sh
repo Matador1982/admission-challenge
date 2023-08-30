@@ -20,9 +20,9 @@ echo -e "12345678\n12345678" | sudo passwd vagrant
 # sshpass -p '12345678' scp $pass_file2 server1:$pass_file2
 
 #lock permission
-chmod 400 $pass_file2
-chmod 400 $pass_file1
-#run file on server1 to change the pass there
+# chmod 400 $pass_file2
+# chmod 400 $pass_file1
+#run the file on server1 to change the pass there
 # sshpass -p '12345678' ssh server1 '/home/vagrant/.ssh/change_pass.sh'
 
 
@@ -30,5 +30,5 @@ chmod 400 $pass_file1
 
 # password=$(cat $"/home/vagrant/.ssh/ssh_pass_for_server2")
 
-# Change the password for vagrant user on server2
+# Change the password for a vagrant user on server2
 # echo "vagrant:$password" | sudo chpasswd
