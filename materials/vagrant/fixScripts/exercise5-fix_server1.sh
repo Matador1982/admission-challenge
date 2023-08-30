@@ -1,6 +1,7 @@
 #!/bin/bash
 # Change some configurations into /etc/ssh/sshd_config to make ssh-pass avaiable 
   sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+  sudo sed -i 's/PubkeyAuthentication yes/PubkeyAuthentication no/' /etc/ssh/sshd_config
   sudo service sshd restart
   
 # set password for vargant user - server1 (pass: 12345678)
