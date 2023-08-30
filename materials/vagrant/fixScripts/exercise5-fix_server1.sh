@@ -22,12 +22,12 @@ EOF
 echo "$config_text" > /home/vagrant/.ssh/config
 
 #creating the pair of keys (public + private)
- ssh-keygen -t rsa -b 4096 -C "server1" -f /home/vagrant/.ssh/server1 -N ""
+# ssh-keygen -t rsa -b 4096 -C "server1" -f /home/vagrant/.ssh/server1 -N ""
 
 #copy the pablic key to server2
- sudo apt update
- sudo apt install sshpass
- #sshpass -p '12345678' ssh-copy-id -i /home/vagrant/.ssh/anton.pub server2
+# sudo apt update
+# sudo apt install sshpass
+# sshpass -p '12345678' ssh-copy-id -i /home/vagrant/.ssh/anton.pub server2
 
 
 
