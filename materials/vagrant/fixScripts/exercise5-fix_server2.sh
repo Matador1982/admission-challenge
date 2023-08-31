@@ -1,7 +1,7 @@
 #!/bin/bash
 # Change some configurations into /etc/ssh/sshd_config to make ssh-pass avaiable 
  sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
- sudo sed -i 's/PubkeyAuthentication no/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+# sudo sed -i 's/PubkeyAuthentication no/PubkeyAuthentication yes/' /etc/ssh/sshd_config
  sudo service sshd restart
  
 # set password for vargant user - server1 (pass: 12345678)
@@ -23,16 +23,17 @@ EOF
 echo "$config_text" > /home/vagrant/.ssh/config
 
 #creating the pair of keys (public + private)
- ssh-keygen -t rsa -b 4096 -C "server2" -f /home/vagrant/.ssh/server2 -N ""
- ssh-keygen -t rsa -b 4096 -C "server1" -f /home/vagrant/.ssh/server1 -N ""
-
-#copy the pablic key to server1
+  ssh-keygen -t rsa -b 4096 -C "server1" -f /home/vagrant/.ssh/server1 -N ""
+# ssh-keygen -t rsa -b 4096 -C "server2" -f /home/vagrant/.ssh/server2 -N ""
+#copy the private key to server1
  sudo apt update
  sudo apt install sshpass
- sshpass -p '12345678' ssh-copy-id -f -i /home/vagrant/.ssh/server2.pub server1
-#Change permission for a vagrant user for server2 and for dir '/home"
- sudo chown vagrant:vagrant server2
- sudo chown vagrant:vagrant /home
-#Copy pab key from server1 
-pass_file2="/home/vagrant/.ssh/server2.pub"
-
+# sshpass -p '12345678' ssh-copy-id -f -i /home/vagrant/.ssh/server2.pub server1
+#Change permission for a vagrant user for server2
+# sudo chown vagrant:vagrant server2
+# give to server1 key for ssh-authorization
+ sshpass -p '12345678' scp /home/vagrant/.ssh/server1 server1:/home/vagrant/.ssh/server1
+ sshpass -p '12345678' scp /home/vagrant/.ssh/server1.pub server1:/home/vagrant/.ssh/server1.pub
+cat /home/vagrant/.ssh/server1.pub >>/home/vagrant/.ssh/authorized_keys
+sudo rm server1
+rm server1.pub
