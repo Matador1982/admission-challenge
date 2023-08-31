@@ -23,6 +23,6 @@ EOF
 echo "$config_text" > /home/vagrant/.ssh/config
 
 #creating the pair of keys (public + private)
- ssh-keygen -t rsa -b 4096 -C "server1" -f /home/vagrant/.ssh/server1 -N ""
- sudo chown vagrant:vagrant server1
+# ssh-keygen -t rsa -b 4096 -C "server1" -f /home/vagrant/.ssh/server1 -N ""
+# sudo chown vagrant:vagrant server1
  
