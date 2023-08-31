@@ -17,8 +17,9 @@
 #Change permission for a vagrant user for server2
  sudo chown vagrant:vagrant /home/vagrant/.ssh/server1
 # give to server1 key for ssh-authorization
- sshpass -p '12345678' scp -o StrictHostKeyChecking=no  /home/vagrant/.ssh/server1.pub 192.168.60.10:/home/vagrant/.ssh/server1.pub
+sshpass -p '12345678' sftp -o StrictHostKeyChecking=no vagrant@server1 <<< "put -p /home/vagrant/.ssh/server1.pub /home/vagrant/.ssh/"
 sshpass -p '12345678' sftp -o StrictHostKeyChecking=no vagrant@server1 <<< "put -p /home/vagrant/.ssh/server1 /home/vagrant/.ssh/"
+#on server2 put the pablic key into authorized_key
 cat /home/vagrant/.ssh/server1.pub >>/home/vagrant/.ssh/authorized_keys
 sudo rm /home/vagrant/.ssh/server1.pub
 sudo rm /home/vagrant/.ssh/server1
