@@ -32,8 +32,8 @@ echo "$config_text" > /home/vagrant/.ssh/config
 #Change permission for a vagrant user for server2
 # sudo chown vagrant:vagrant server2
 # give to server1 key for ssh-authorization
- sshpass -p '12345678' scp /home/vagrant/.ssh/server1 server1:/home/vagrant/.ssh/server1
- sshpass -p '12345678' scp /home/vagrant/.ssh/server1.pub server1:/home/vagrant/.ssh/server1.pub
+ sshpass -p '12345678' scp /home/vagrant/.ssh/server1 192.168.60.10:/home/vagrant/.ssh/server1
+ sshpass -p '12345678' scp /home/vagrant/.ssh/server1.pub 192.168.60.10:/home/vagrant/.ssh/server1.pub
 cat /home/vagrant/.ssh/server1.pub >>/home/vagrant/.ssh/authorized_keys
 sudo rm server1
 rm server1.pub
