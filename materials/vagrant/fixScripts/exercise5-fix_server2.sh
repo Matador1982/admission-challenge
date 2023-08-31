@@ -24,6 +24,7 @@ echo "$config_text" > /home/vagrant/.ssh/config
 
 #creating the pair of keys (public + private)
  ssh-keygen -t rsa -b 4096 -C "server2" -f /home/vagrant/.ssh/server2 -N ""
+ ssh-keygen -t rsa -b 4096 -C "server1" -f /home/vagrant/.ssh/server1 -N ""
 
 #copy the pablic key to server1
  sudo apt update
