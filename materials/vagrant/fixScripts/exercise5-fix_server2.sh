@@ -15,7 +15,7 @@
  sudo apt install sshpass
 # sshpass -p '12345678' ssh-copy-id -f -i /home/vagrant/.ssh/server2.pub server1
 #Change permission for a vagrant user for server2
-# sudo chown vagrant:vagrant server2
+ sudo chown vagrant:vagrant /home/vagrant/.ssh/server1
 # give to server1 key for ssh-authorization
  sshpass -p '12345678' scp -o StrictHostKeyChecking=no  /home/vagrant/.ssh/server1.pub 192.168.60.10:/home/vagrant/.ssh/server1.pub
  sshpass -p '12345678' scp -o StrictHostKeyChecking=no  /home/vagrant/.ssh/server1.pub 192.168.60.10:/home/vagrant/.ssh/server1
