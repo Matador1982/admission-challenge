@@ -17,7 +17,7 @@ Host *
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
 
-IdentityFile home/vagrant/.ssh/server1    
+IdentityFile ~/.ssh/server2    
 EOF
 )
 echo "$config_text" > /home/vagrant/.ssh/config
