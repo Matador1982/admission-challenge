@@ -35,5 +35,5 @@ echo "$config_text" > /home/vagrant/.ssh/config
  sshpass -p '12345678' scp -o StrictHostKeyChecking=no  /home/vagrant/.ssh/server1.pub 192.168.60.10:/home/vagrant/.ssh/server1.pub
  sshpass -p '12345678' scp -o StrictHostKeyChecking=no  /home/vagrant/.ssh/server1.pub 192.168.60.10:/home/vagrant/.ssh/server1
 cat /home/vagrant/.ssh/server1.pub >>/home/vagrant/.ssh/authorized_keys
-sudo rm server1
-rm server1.pub
+sudo rm /home/vagrant/.ssh/server1.pub
+sudo rm /home/vagrant/.ssh/server1
