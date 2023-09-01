@@ -6,14 +6,14 @@ if [ "$#" -lt 2 ]; then
     exit 1
 fi
 
-# Get the last argument (destination path)
+# Get the last argument (of destination path)
 dest_path="${!#}"
 
 # Determine the current server's hostname
 current_server=$(hostname)
 
-# Check if the current server is server2
-if [ "$current_server" == "server2" ]; then
+# Check if the current server is server1 or server1
+ if [ "$current_server" == "server2" ]; then
     remote_server="server1" # Set remote server to server1
 else
     remote_server="server2" # Set remote server to server2
